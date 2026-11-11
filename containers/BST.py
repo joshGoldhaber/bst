@@ -66,6 +66,10 @@ class BST(BinaryTree):
 
         return True
 
+    def __iter__(self):
+        for value in self.to_list('inorder'):
+            yield value
+
     def is_bst_satisfied(self):
         '''
         Whenever you implement a data structure,
